@@ -1,0 +1,22 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: it-IT
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Vendite"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Vendite
+ref table DateTableTemplate_59ffdf84-192e-4674-8926-5f40f74ac59a
+ref table LocalDateTable_6f1898af-4c65-4e7f-819a-c427555d8289
+ref table 'Measure Table'
+
+ref cultureInfo en-US
+

@@ -1,0 +1,35 @@
+table 'Measure Table'
+	lineageTag: 9c65b1cb-7367-4e28-b6f9-d9040dfabc29
+
+	measure 'Totale Vendite' = SUM(Vendite[Importo])
+		lineageTag: debceff3-0377-4d24-ada1-48fb6303389e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Margine = SUM(Vendite[Importo]) - SUM(Vendite[Costo])
+		lineageTag: 3abcb609-9ebe-40d9-b9dc-aa3762af1c3c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Margine %' = [Margine] / [Totale Vendite]
+		lineageTag: b9c8b4be-3ad1-4335-a880-89a0609d8ecf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Column
+		formatString: 0
+		lineageTag: cb6d57ff-eef6-441f-8ed7-5d252dcbcb06
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Measure Table' = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 3f4bea5558644fb7b79524fd0d7f7d10
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+
