@@ -2,6 +2,7 @@
 
 Antipasto: tagliere misto
 Primo: da decidere
-Pizza: ___
+Pizza: Posso parlà da i banco?
 Dolce: tiramisù
 Bevanda: acqua frizzante
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
