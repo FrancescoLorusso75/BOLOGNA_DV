@@ -2,6 +2,6 @@
 
 Antipasto: tagliere misto
 Primo: da decidere
-Pizza: ___
+Pizza: con carne di cane
 Dolce: tiramisù
 Bevanda: acqua frizzante
