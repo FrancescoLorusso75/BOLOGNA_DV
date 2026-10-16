@@ -2,6 +2,7 @@ table 'Measure Table'
 	lineageTag: 9c65b1cb-7367-4e28-b6f9-d9040dfabc29
 
 	measure 'Totale Vendite' = SUM(Vendite[Importo])
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
 		lineageTag: debceff3-0377-4d24-ada1-48fb6303389e
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
