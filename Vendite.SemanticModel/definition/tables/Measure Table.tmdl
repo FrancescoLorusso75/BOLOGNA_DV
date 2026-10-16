@@ -13,7 +13,9 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Margine %' = IF([Totale Vendite] > 0, [Margine] / [Totale Vendite])
+
+	measure 'Margine %' = DIVIDE([Margine], [Totale Vendite], 0)
+
 		lineageTag: b9c8b4be-3ad1-4335-a880-89a0609d8ecf
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
